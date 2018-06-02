@@ -1,0 +1,110 @@
+#
+# File $HOME/.gitconfig
+# Author: Pavol Plaskon, pavol.plaskon@gmail.com
+#
+# Based on: https://github.com/s3rvac/dotfiles/blob/master/git/.gitconfig
+#
+
+[user]
+	name = Pavol Plaskoň
+
+[color]
+	; Enable colored output.
+	ui = true
+
+[color "grep"]
+	; Match my colors used by the system grep.
+	filename = magenta
+	match = yellow bold
+	separator = cyan
+
+[alias]
+	a = add
+	aa = add --update
+	aaa = add --all
+	ap = add --patch
+	ar = commit --verbose --amend --reset-author
+	authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
+	bl = blame
+	br = branch -vv
+	bra = branch --all -vv
+	c = commit --verbose
+	ca = commit --verbose --all
+	clear = reset --hard
+	conflicts = diff --name-only --diff-filter=U --relative
+	co = checkout
+	cob = checkout -b
+	cot = checkout -t
+	com = checkout master
+	cp = cherry-pick
+	d = diff
+	da = diff HEAD
+	ds = diff --staged
+	dell = branch --delete
+	delr = push origin -d
+	; https://github.com/s3rvac/git-edit-index
+	ei = edit-index
+	ignored = ls-files --exclude-standard --ignored --others
+	l = "!git --no-pager log -20 --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'; echo"
+	ll = log --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	lf = log --name-status --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	lg = log --graph --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	lga = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	ls = log --stat --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+	ld = log --patch
+	m = merge --no-ff
+	p = push
+	pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+	pl = pull
+	plpr = pull --prune
+	plrb = pull --rebase
+	pushforce = push --force-with-lease
+	pforce = push --force-with-lease
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	rbs = rebase --skip
+	s = status --short --branch
+	sh = stash
+	sha = stash apply
+	shd = stash drop
+	shl = stash list
+	shp = stash pop
+	shs = stash show -p
+	shu = stash --include-untracked
+	sw = show --format=fuller
+	tags = tag --list -n1
+	; https://github.com/aanand/git-up
+	u = up
+	undo = reset --soft HEAD^
+
+[core]
+	; Whitespace problems that git should recognize.
+	whitespace = trailing-space,space-before-tab
+	; Used pager.
+	pager = less -iFRXS -x4
+	; Used editor.
+	editor = vim
+
+[diff]
+	; Allow `git diff` to do basic rename and copy detection.
+	renames = copies
+
+[push]
+	; `git push` without any refspec will push the current branch out to the
+	; same name at the remote repository only when it is set to track the
+	; branch with the same name over there.
+	default = simple
+
+[merge]
+	; The used merge tool.
+	tool = vimdiff
+
+[credential]
+	; Enable password cache for http/https and make it timeout after 1 hour.
+	helper = cache --timeout=3600
+
+[include]
+	; Include a local config when it exists.
+	path = .gitconfig.local
