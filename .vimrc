@@ -451,10 +451,6 @@ au FileType haskell setl tabstop=4     " A tab counts for 4 spaces.
 au FileType haskell setl softtabstop=4 " Causes backspace to delete 4 spaces.
 au FileType haskell setl shiftwidth=4  " Shift by 4 spaces.
 
-" Go to imports.
-au FileType python nnoremap <buffer> <Leader>im /^\(from\\|import\) <CR>:nohlsearch<CR>:echo<CR>
-augroup end
-
 "-----------------------------------------
 " Command-T: Fast file navigation for VIM.
 "-----------------------------------------
