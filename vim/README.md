@@ -2,9 +2,9 @@
 
 Configuration files for the Vim editor.
 
-## Plugin
+## Plugins
 
-I install these plugins using [pathogen](https://github.com/tpope/vim-pathogen).
+I install the following plugins using [pathogen](https://github.com/tpope/vim-pathogen).
 
 * [Command-T](https://github.com/wincent/command-t) - fast "fuzzy" mechanism
   for opening files and more.
