@@ -462,6 +462,12 @@ let g:CommandTHighlightColor='CommandTHighlightColor' " Custom highlight color.
 let g:CommandTTraverseSCM='pwd' " Use Vim's present working directory as the root.
 let g:CommandTCancelMap=['<Esc>', '<C-c>'] " Keys to close the search window.
 
+
+" -----------------------------------------------------
+" vim-argwrap: wrap/unwrap function args, lists, etc.
+" -----------------------------------------------------
+nnoremap <silent> <Leader>wa :ArgWrap<CR>
+
 " -----------------------------------------------------
 " vim-mail-refs: Adding references when writing emails.
 " -----------------------------------------------------
