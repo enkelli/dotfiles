@@ -351,13 +351,13 @@ vnoremap // y/<C-R>"<CR>
 " * also counts number of occurrences of string.
 noremap * *<C-O>:%s///gn<CR>
 
-" Spell-check
-set nospell
-set spelllang=en,cs,sk
-
 " Stay in visual mode when indenting.
 vnoremap < <gv
 vnoremap > >gv
+
+" Spell-check
+set nospell
+set spelllang=en,cs,sk
 
 " F1: Toggle spell checker.
 nnoremap <silent> <F1> :set spell!<CR>:set spell?<CR>
@@ -374,6 +374,10 @@ function! s:ToggleSpelllang()
 	set spelllang?
 endfunction
 nnoremap <silent> <S-F1> :call <SID>ToggleSpelllang()<CR>
+
+" Command mistypes.
+nnoremap :E :e
+nnoremap :Q :q
 
 " Shift+F3: Toggle the display of colorcolumn.
 function! s:ToggleColorColumn()
@@ -394,9 +398,9 @@ nnoremap <silent> <F4> :set nowrap!<CR>:set nowrap?<CR>
 " Executes :make and opens the quickfix window if there is an error.
 nnoremap <F8> mp :echo 'Making...' <Bar> silent make <Bar> botright cw<CR><C-w><Up>
 
-" Consider *.dsm files as files containing disassembly from the retdec.com
-" decompilation service.
-au BufNewFile,BufRead *.dsm set ft=retdecdsm
+"------------------------------------------------------------------------------
+" File-type specific settings and other autocommands.
+"------------------------------------------------------------------------------
 
 " C and C++
 augroup c_cpp
