@@ -464,6 +464,17 @@ let g:CommandTCancelMap=['<Esc>', '<C-c>'] " Keys to close the search window.
 
 
 " -----------------------------------------------------
+" targets.vim: Additional text objects.
+" -----------------------------------------------------
+" Prefer multiline targets around cursor over distant targets within cursor
+" line. E.g. In the following example, when cursor is on 'a', `ci{` will affect
+" the outer block, not {b, c} block.
+" {
+"  a, {b, c}
+" }
+let g:targets_seekRanges = 'cr cb cB lc ac Ac lr lb ar ab lB Ar aB Ab AB rr ll rb al rB Al bb aa bB Aa BB AA'
+
+" -----------------------------------------------------
 " vim-argwrap: wrap/unwrap function args, lists, etc.
 " -----------------------------------------------------
 nnoremap <silent> <Leader>wa :ArgWrap<CR>
