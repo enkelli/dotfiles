@@ -450,6 +450,21 @@ au FileType haskell setl expandtab     " Use spaces instead of tabs.
 au FileType haskell setl tabstop=4     " A tab counts for 4 spaces.
 au FileType haskell setl softtabstop=4 " Causes backspace to delete 4 spaces.
 au FileType haskell setl shiftwidth=4  " Shift by 4 spaces.
+augroup end
+
+" Markdown
+augroup markdown
+au!
+au FileType markdown setl spell         " Enable spellchecking.
+au FileType markdown setl expandtab     " Use spaces instead of tabs.
+au FileType markdown setl tabstop=4     " Lists are indented with 4 spaces.
+au FileType markdown setl softtabstop=4 " Causes backspace to delete 4 spaces.
+au FileType markdown setl shiftwidth=4  " Shift by 4 spaces.
+augroup end
+
+"------------------------------------------------------------------------------
+" Plugins.
+"------------------------------------------------------------------------------
 
 "-----------------------------------------
 " Command-T: Fast file navigation for VIM.
