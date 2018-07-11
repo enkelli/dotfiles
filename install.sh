@@ -34,5 +34,5 @@ done
 
 # vim config has its own directory
 echo "Creating symlink to .vimrc in home directory."
+mv ~/.vimrc ~/dotfiles_old/
 ln -s $dir/vim/.vimrc ~/.vimrc
-
