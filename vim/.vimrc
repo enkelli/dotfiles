@@ -190,6 +190,10 @@ cnoremap <c-p>  <up>
 nnoremap 0 ^
 nnoremap ^ 0
 
+" Opening files in tabs.
+nnoremap <Leader>bash :tabe ~/.bashrc<CR>
+nnoremap <Leader>vim :tabe ~/.vimrc<CR>
+
 " Quickly add empty line. Number of lines may precede.
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
