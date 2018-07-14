@@ -493,6 +493,13 @@ let g:CommandTCancelMap=['<Esc>', '<C-c>'] " Keys to close the search window.
 " }
 let g:targets_seekRanges = 'cr cb cB lc ac Ac lr lb ar ab lB Ar aB Ab AB rr ll rb al rB Al bb aa bB Aa BB AA'
 
+"-----------------------------
+" UltiSnips: Snippets for Vim.
+"-----------------------------
+let g:UltiSnipsExpandTrigger='<Tab>'
+let g:UltiSnipsJumpForwardTrigger='<Tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+
 " -----------------------------------------------------
 " vim-argwrap: wrap/unwrap function args, lists, etc.
 " -----------------------------------------------------
