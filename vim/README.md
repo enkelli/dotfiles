@@ -12,5 +12,6 @@ I install the following plugins using [pathogen](https://github.com/tpope/vim-pa
 * [vim-argwrap](https://github.com/FooSoft/vim-argwrap) - wrap and unwrap function arguments, lists, collections
 * [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste) - transparent pasting into vim
 * [vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus) - look up words in an online thesaurus
+* [vim-repeat](https://github.com/tpope/vim-repeat) - enables repeating plugin maps with `"."`
 * [vim-sort-motion](https://github.com/christoomey/vim-sort-motion) - sort using text objects and motions
 * [vim-surround](https://github.com/tpope/vim-surround) - easily delete, change and add surroundings
