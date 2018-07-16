@@ -477,13 +477,16 @@ augroup end
 "-----------------------------------------
 " Command-T: Fast file navigation for VIM.
 "-----------------------------------------
-let g:CommandTMaxCachedDirectories=0 " Do not limit caching.
-let g:CommandTMatchWindowReverse=1 " Show the entries in reverse order.
-let g:CommandTMaxHeight=10 " Show at most 10 matches.
 hi CommandTHighlightColor guibg=darkblue guifg=white
+let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 let g:CommandTHighlightColor='CommandTHighlightColor' " Custom highlight color.
+let g:CommandTMatchWindowReverse=1 " Show the entries in reverse order.
+let g:CommandTMaxCachedDirectories=0 " Do not limit caching.
+let g:CommandTMaxFiles=10000
+let g:CommandTMaxHeight=10 " Show at most 10 matches.
+let g:CommandTSuppressMaxFilesWarning=1
 let g:CommandTTraverseSCM='pwd' " Use Vim's present working directory as the root.
-let g:CommandTCancelMap=['<Esc>', '<C-c>'] " Keys to close the search window.
+
 
 
 " -----------------------------------------------------
