@@ -7,7 +7,7 @@ Configuration files for the Vim editor.
 I install the following plugins using [pathogen](https://github.com/tpope/vim-pathogen).
 
 * [Command-T](https://github.com/wincent/command-t) - Fast "fuzzy" mechanism for opening files and more.
-* [matchit](https://www.vim.org/scripts/download_script.php?src_id=8196) - Extends `"%"` for other languages.
+* [matchit](https://www.vim.org/scripts/script.php?script_id=39) - Extends `"%"` for other languages.
 * [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
 * [targets.vim](https://github.com/wellle/targets.vim) - Additional text objects and seeking.
 * [tcomment_vim](https://github.com/tomtom/tcomment_vim) - Add/remove comments with motion.
