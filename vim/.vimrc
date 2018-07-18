@@ -429,6 +429,10 @@ au FileType python setl shiftwidth=4  " Shift by 4 spaces.
 
 " Go to imports.
 au FileType python nnoremap <buffer> <Leader>im /^\(from\\|import\) <CR>:nohlsearch<CR>:echo<CR>
+
+"ALE plugin
+au FileType python let b:ale_linters = {'python': ['flake8']}
+au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
 augroup end
 
 " Git commits.
@@ -527,3 +531,11 @@ augroup end
 " --------------------------------------------------------------
 let g:online_thesaurus_map_keys = 0 " Disable default key maps.
 nnoremap <Leader>ot :OnlineThesaurusCurrentWord<CR>
+
+" --------------------------------------------------------------
+" ALE: Asynchronous Lint Engine
+"
+let g:ale_enabled = 0
+let b:ale_linters_explicit = 1
+nnoremap <silent> <F9> :ALEToggle<CR>
+nnoremap <silent> <S-F9> :ALENextWrap<CR>

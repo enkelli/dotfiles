@@ -6,6 +6,7 @@ Configuration files for the Vim editor.
 
 I install the following plugins using [pathogen](https://github.com/tpope/vim-pathogen).
 
+* [ALE](https://github.com/w0rp/ale/blob/master/doc/ale.txt) - Asynchronous lint engine.
 * [Command-T](https://github.com/wincent/command-t) - Fast "fuzzy" mechanism for opening files and more.
 * [matchit](https://www.vim.org/scripts/script.php?script_id=39) - Extends `"%"` for other languages.
 * [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
