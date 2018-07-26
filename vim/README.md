@@ -9,9 +9,9 @@ I install the following plugins using [pathogen](https://github.com/tpope/vim-pa
 * [ALE](https://github.com/w0rp/ale/blob/master/doc/ale.txt) - Asynchronous lint engine.
 * [Command-T](https://github.com/wincent/command-t) - Fast "fuzzy" mechanism for opening files and more.
 * [matchit](https://www.vim.org/scripts/script.php?script_id=39) - Extends `"%"` for other languages.
-* [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
 * [targets.vim](https://github.com/wellle/targets.vim) - Additional text objects and seeking.
 * [tcomment_vim](https://github.com/tomtom/tcomment_vim) - Add/remove comments with motion.
+* [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
 * [vim-argwrap](https://github.com/FooSoft/vim-argwrap) - Wrap and unwrap function arguments, lists, collections, etc.
 * [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste) - Transparent pasting into vim.
 * [vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus) - Look up words in an online thesaurus.
