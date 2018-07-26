@@ -539,3 +539,8 @@ let g:ale_enabled = 0
 let b:ale_linters_explicit = 1
 nnoremap <silent> <F9> :ALEToggle<CR> :echo "ALE enabled: " ale_enabled<CR>
 nnoremap <silent> <S-F9> :ALENextWrap<CR>
+
+" --------------------------------------------------------------
+" NERDTree: File explorer
+"
+nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
