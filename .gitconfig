@@ -30,6 +30,7 @@
 	bra = branch --all -vv
 	c = commit --verbose
 	ca = commit --verbose --all
+	cam = commit --verbose --all --amend
 	clear = reset --hard
 	conflicts = diff --name-only --diff-filter=U --relative
 	co = checkout
