@@ -195,6 +195,7 @@ alias mpkg='makepkg -srci'
 # not bulletproof, not found better
 if [ -f /etc/arch-release ]; then
     alias yai='yaourt -S'
+    alias yas='yaourt -Ss'
     alias yaR='yaourt -R'
     alias yaU='yaourt -Syu --aur'
 fi
