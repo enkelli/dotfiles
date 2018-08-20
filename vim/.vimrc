@@ -435,7 +435,18 @@ au FileType python let b:ale_linters = {'python': ['flake8']}
 au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
 
 "vim-sort-motion plugin
-let g:sort_motion_flags = "i"
+function! s:ToggleCaseInsensitiveVimSortMotion()
+	if g:sort_motion_flags =~ "i"
+		let g:sort_motion_flags = ""
+		echo "Case-sensitive sorting enabled."
+	else
+		let g:sort_motion_flags = "i"
+		echo "Case-INsensitive sorting enabled."
+	endif
+endfunction
+
+nnoremap <silent> \si :call<SID>ToggleCaseInsensitiveVimSortMotion()<CR>
+
 
 augroup end
 
