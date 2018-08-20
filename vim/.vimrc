@@ -434,19 +434,18 @@ au FileType python nnoremap <buffer> <Leader>im /^\(from\\|import\) <CR>:nohlsea
 au FileType python let b:ale_linters = {'python': ['flake8']}
 au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
 
-"vim-sort-motion plugin
-function! s:ToggleCaseInsensitiveVimSortMotion()
-	if g:sort_motion_flags =~ "i"
-		let g:sort_motion_flags = ""
-		echo "Case-sensitive sorting enabled."
+" vim-sort-motion plugin
+let g:sort_motion = '_gs'
+
+function! s:SortImportsCaseInsensitively()
+	if getline('.') =~ '^import\|^from.*import'
+		let g:sort_motion_flags = 'i'
 	else
-		let g:sort_motion_flags = "i"
-		echo "Case-INsensitive sorting enabled."
+		let g:sort_motion_flags = ''
 	endif
+	normal _gs
 endfunction
-
-nnoremap <silent> \si :call<SID>ToggleCaseInsensitiveVimSortMotion()<CR>
-
+nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 
 augroup end
 
