@@ -433,6 +433,10 @@ au FileType python nnoremap <buffer> <Leader>im /^\(from\\|import\) <CR>:nohlsea
 "ALE plugin
 au FileType python let b:ale_linters = {'python': ['flake8']}
 au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
+
+"vim-sort-motion plugin
+let g:sort_motion_flags = "i"
+
 augroup end
 
 " Git commits.
