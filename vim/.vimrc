@@ -435,6 +435,18 @@ au FileType python let b:ale_linters = {'python': ['flake8']}
 au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
 
 " vim-sort-motion plugin
+"
+" This is not bulletproff and deterministic in all cases. E.g. the following
+" two blocks are not changed with 'i' option. Moreover, with 'ui', only one is
+" kept. But in most (real use-case) this suffices.
+"
+" from aaa import x
+" from AAA import x
+" from aAa import x
+"
+" from AAA import x
+" from aAa import x
+" from aaa import x
 let g:sort_motion = '_gs'
 
 function! s:SortImportsCaseInsensitively()
