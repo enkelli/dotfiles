@@ -439,7 +439,7 @@ let g:sort_motion = '_gs'
 
 function! s:SortImportsCaseInsensitively()
 	if getline('.') =~ '^import\|^from.*import'
-		let g:sort_motion_flags = 'i'
+		let g:sort_motion_flags = 'ui'
 	else
 		let g:sort_motion_flags = ''
 	endif
