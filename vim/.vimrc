@@ -434,6 +434,9 @@ au FileType python nnoremap <buffer> <Leader>im /^\(from\\|import\) <CR>:nohlsea
 au FileType python let b:ale_linters = {'python': ['flake8']}
 au FileType python let b:ale_python_flake8_options = '--max-line-length=100'
 
+" argwrap plugin
+au FileType python let b:argwrap_tail_comma = 1
+
 " vim-sort-motion plugin
 "
 " This is not bulletproff and deterministic in all cases. E.g. the following
