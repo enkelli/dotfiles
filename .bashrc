@@ -165,7 +165,6 @@ alias l='ls -CF'
 
 alias vim='vim -p'
 alias v='vim'
-alias opn='gnome-open'
 alias rm='rm -i'
 
 alias rg='ranger'
