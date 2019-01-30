@@ -209,6 +209,12 @@ function we()
     curl "wttr.in/$1";
 }
 
+function mcd()
+{
+	mkdir "$1";
+	cd "$1";
+}
+
 # Universal extractor
 # Source: https://github.com/metthal/configs/blob/master/.bashrc
 complete -f -X '!*.@(tar.gz|tgz|tar.bz2|tbz2|xz|tar|zip|rar|7z|bz2)' extr
