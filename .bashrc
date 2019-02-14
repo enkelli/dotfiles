@@ -179,6 +179,8 @@ function rgc {  # ranger-cd
 }
 
 alias rvenv='source virtualenv/bin/activate'
+alias mvenv='python3 -m venv'
+
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 
