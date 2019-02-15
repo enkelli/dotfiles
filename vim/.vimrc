@@ -162,6 +162,12 @@ autocmd BufNewFile *.py 0put = \"#!/usr/bin/env python3\<nl>\"|$
 " shebang for a new bash script
 autocmd BufNewFile *.sh 0put = \"#!/bin/bash\<nl>\"|$
 
+" Leader to spacebar.
+let mapleader = "\<Space>"
+
+" Select all text in buffer.
+map <Leader>a ggVG
+
 " \rl Toggle relative/absolute line numbers.
 nnoremap <silent> <Leader>rl :set relativenumber!<CR>:set relativenumber?<CR>
 
