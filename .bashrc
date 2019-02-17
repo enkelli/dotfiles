@@ -191,15 +191,6 @@ alias m='make'
 # -c clean tmp build files, -i install
 alias mpkg='makepkg -srci'
 
-# Arch Linux
-# not bulletproof, not found better
-if [ -f /etc/arch-release ]; then
-    alias yai='yaourt -S'
-    alias yas='yaourt -Ss'
-    alias yaR='yaourt -R'
-    alias yaU='yaourt -Syu --aur'
-fi
-
 # Complete
 __git_complete g _git &>/dev/null
 
