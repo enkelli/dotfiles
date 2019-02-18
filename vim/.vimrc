@@ -170,6 +170,8 @@ map <Leader>a ggVG
 
 " \rl Toggle relative/absolute line numbers.
 nnoremap <silent> <Leader>rl :set relativenumber!<CR>:set relativenumber?<CR>
+" \nl Toggle line numbers.
+nnoremap <silent> <Leader>nl :set number!<CR>:set number?<CR>
 
 " Show non-printable characters \l
 nnoremap <Leader>l :set list!<CR>
