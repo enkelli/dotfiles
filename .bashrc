@@ -164,6 +164,7 @@ alias l='ls -CF'
 
 alias vim='vim -p'
 alias v='vim'
+alias vb='vim -b'
 alias rm='rm -i'
 
 alias rg='ranger'
