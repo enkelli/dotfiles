@@ -32,6 +32,7 @@
 	ca = commit --verbose --all
 	cam = commit --verbose --amend
 	caam = commit --verbose --all --amend
+	cl = clean
 	clear = reset --hard
 	conflicts = diff --name-only --diff-filter=U --relative
 	co = checkout
