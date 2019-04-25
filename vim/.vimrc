@@ -27,7 +27,7 @@ set shortmess+=aIoOtT           " Abbreviation of messages (avoids 'hit enter ..
 set showcmd                     " Show (partial) command in the status line.
 set showmode                    " Show the current mode.
 set tabpagemax=100              " Maximum number of tabs to open by the -p argument.
-set ttimeoutlen=0				" Lower the timeout when entering the normal mode from insert mode.
+set ttimeoutlen=0               " Lower the timeout when entering the normal mode from insert mode.
 set ttyfast                     " Improves redrawing for newer computers.
 
 set fileencodings=utf-8,latin2
@@ -98,8 +98,8 @@ set splitright                  " Open new vertical panes in the right rather th
 set splitbelow                  " Open new horizontal panes in the bottom rather than top.
 
 " Statusline.
-set laststatus=2        		" Always display a statusline.
-set noruler            			" Since I'm using a statusline, disable ruler.
+set laststatus=2                " Always display a statusline.
+set noruler                     " Since I'm using a statusline, disable ruler.
 set statusline=%<%f             " Path to the file in the buffer.
 set statusline+=\ %h%w%m%r%k    " Flags (e.g. [+], [RO]).
 set statusline+=\ [%{(&fenc\ ==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")},%{&ff}] " Encoding and line endings.
@@ -221,11 +221,11 @@ noremap <Leader>j J
 " the indentation whitespace.
 " Based on http://vi.stackexchange.com/a/440.
 function! s:JoinWithoutSpaces()
-	normal! gJ
-	" Remove any whitespace.
-	if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
-		normal! dw
-	endif
+    normal! gJ
+    " Remove any whitespace.
+    if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
+        normal! dw
+    endif
 endfunction
 noremap <silent> <Leader>J :call <SID>JoinWithoutSpaces()<CR>
 
@@ -247,112 +247,112 @@ vmap <Leader>P "+P
 " Note: I do not use https://github.com/christoomey/vim-tmux-navigator because
 "       it does not work when vim is run over ssh.
 if exists('$TMUX')
-	function! s:TmuxOrSplitSwitch(wincmd, tmuxdir)
-		let previous_winnr = winnr()
-		silent! execute 'wincmd ' . a:wincmd
-		if previous_winnr == winnr()
-			call system('tmux select-pane -' . a:tmuxdir)
-			redraw!
-		endif
-	endfunction
+    function! s:TmuxOrSplitSwitch(wincmd, tmuxdir)
+        let previous_winnr = winnr()
+        silent! execute 'wincmd ' . a:wincmd
+        if previous_winnr == winnr()
+            call system('tmux select-pane -' . a:tmuxdir)
+            redraw!
+        endif
+    endfunction
 
-	let previous_title = substitute(system("tmux display-message -p '#{pane_title}'"), '\n', '', '')
-	let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
-	let &t_te = "\<Esc>]2;" . previous_title . "\<Esc>\\" . &t_te
+    let previous_title = substitute(system("tmux display-message -p '#{pane_title}'"), '\n', '', '')
+    let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
+    let &t_te = "\<Esc>]2;" . previous_title . "\<Esc>\\" . &t_te
 
-	nnoremap <silent> <C-h> :call <SID>TmuxOrSplitSwitch('h', 'L')<CR>
-	nnoremap <silent> <C-j> :call <SID>TmuxOrSplitSwitch('j', 'D')<CR>
-	nnoremap <silent> <C-k> :call <SID>TmuxOrSplitSwitch('k', 'U')<CR>
-	nnoremap <silent> <C-l> :call <SID>TmuxOrSplitSwitch('l', 'R')<CR>
+    nnoremap <silent> <C-h> :call <SID>TmuxOrSplitSwitch('h', 'L')<CR>
+    nnoremap <silent> <C-j> :call <SID>TmuxOrSplitSwitch('j', 'D')<CR>
+    nnoremap <silent> <C-k> :call <SID>TmuxOrSplitSwitch('k', 'U')<CR>
+    nnoremap <silent> <C-l> :call <SID>TmuxOrSplitSwitch('l', 'R')<CR>
 else
-	noremap <C-h> <C-w>h
-	noremap <C-j> <C-w>j
-	noremap <C-k> <C-w>k
-	noremap <C-l> <C-w>l
+    noremap <C-h> <C-w>h
+    noremap <C-j> <C-w>j
+    noremap <C-k> <C-w>k
+    noremap <C-l> <C-w>l
 endif
 
 " Graphical Vim.
 if has('gui_running')
-	" Font.
-	set guifont=Monospace\ 11.5
+    " Font.
+    set guifont=Monospace\ 11.5
 
-	" GUI options:
-	"  - aA: Enable autoselection.
-	"  - c: Use console dialogs.
-	"  - i: Use a Vim icon.
-	" Menubar, toolbar, scrollbars etc. are disabled.
-	set guioptions=aAci
+    " GUI options:
+    "  - aA: Enable autoselection.
+    "  - c: Use console dialogs.
+    "  - i: Use a Vim icon.
+    " Menubar, toolbar, scrollbars etc. are disabled.
+    set guioptions=aAci
 
-	" Leave no pixels around the GVim window.
-	set guiheadroom=0
+    " Leave no pixels around the GVim window.
+    set guiheadroom=0
 
-	" Enable mouse usage.
-	set mouse=a
+    " Enable mouse usage.
+    set mouse=a
 
-	" Hide mouse cursor when editing.
-	set mousehide
+    " Hide mouse cursor when editing.
+    set mousehide
 
-	" Disable cursor blinking.
-	set guicursor=a:blinkon0
+    " Disable cursor blinking.
+    set guicursor=a:blinkon0
 
-	" Colors
-	color elflord
-	hi Normal guifg=white guibg=black
+    " Colors
+    color elflord
+    hi Normal guifg=white guibg=black
 else
-	" Lower the timeout when entering normal mode from insert mode.
-	set ttimeoutlen=0
+    " Lower the timeout when entering normal mode from insert mode.
+    set ttimeoutlen=0
 
-	" Check for changes in files more often. This makes Vim in terminal behaves
-	" more like GVim, although sadly not the same.
-	augroup file_change_check
-	au!
-	au BufEnter * silent! checktime
-	augroup end
+    " Check for changes in files more often. This makes Vim in terminal behaves
+    " more like GVim, although sadly not the same.
+    augroup file_change_check
+    au!
+    au BufEnter * silent! checktime
+    augroup end
 
-	" Make some key combinations work when running Vim in Tmux.
-	if exists('$TMUX')
-		execute "set <xUp>=\e[1;*A"
-		execute "set <xDown>=\e[1;*B"
-		execute "set <xRight>=\e[1;*C"
-		execute "set <xLeft>=\e[1;*D"
-		execute "set <xHome>=\e[1;*H"
-		execute "set <xEnd>=\e[1;*F"
-		execute "set <Insert>=\e[2;*~"
-		execute "set <Delete>=\e[3;*~"
-		execute "set <PageUp>=\e[5;*~"
-		execute "set <PageDown>=\e[6;*~"
-		if exists('$MC_TMPDIR')
-			" Running inside Midnight Commander.
-			execute "set <F1>=\e[1;*P"
-			execute "set <F2>=\e[1;*Q"
-			execute "set <F3>=\e[1;*R"
-			execute "set <F4>=\e[1;*S"
-		else
-			" Not running inside Midnight Commander.
-			execute "set <xF1>=\e[1;*P"
-			execute "set <xF2>=\e[1;*Q"
-			execute "set <xF3>=\e[1;*R"
-			execute "set <xF4>=\e[1;*S"
-		endif
-		execute "set <F5>=\e[15;*~"
-		execute "set <F6>=\e[17;*~"
-		execute "set <F7>=\e[18;*~"
-		execute "set <F8>=\e[19;*~"
-		execute "set <F9>=\e[20;*~"
-		execute "set <F10>=\e[21;*~"
-		execute "set <F11>=\e[23;*~"
-		execute "set <F12>=\e[24;*~"
-	endif
+    " Make some key combinations work when running Vim in Tmux.
+    if exists('$TMUX')
+        execute "set <xUp>=\e[1;*A"
+        execute "set <xDown>=\e[1;*B"
+        execute "set <xRight>=\e[1;*C"
+        execute "set <xLeft>=\e[1;*D"
+        execute "set <xHome>=\e[1;*H"
+        execute "set <xEnd>=\e[1;*F"
+        execute "set <Insert>=\e[2;*~"
+        execute "set <Delete>=\e[3;*~"
+        execute "set <PageUp>=\e[5;*~"
+        execute "set <PageDown>=\e[6;*~"
+        if exists('$MC_TMPDIR')
+            " Running inside Midnight Commander.
+            execute "set <F1>=\e[1;*P"
+            execute "set <F2>=\e[1;*Q"
+            execute "set <F3>=\e[1;*R"
+            execute "set <F4>=\e[1;*S"
+        else
+            " Not running inside Midnight Commander.
+            execute "set <xF1>=\e[1;*P"
+            execute "set <xF2>=\e[1;*Q"
+            execute "set <xF3>=\e[1;*R"
+            execute "set <xF4>=\e[1;*S"
+        endif
+        execute "set <F5>=\e[15;*~"
+        execute "set <F6>=\e[17;*~"
+        execute "set <F7>=\e[18;*~"
+        execute "set <F8>=\e[19;*~"
+        execute "set <F9>=\e[20;*~"
+        execute "set <F10>=\e[21;*~"
+        execute "set <F11>=\e[23;*~"
+        execute "set <F12>=\e[24;*~"
+    endif
 endif
 
 " Open a link under the cursor in a web browser (similar to gx, but faster).
 let s:web_browser_path='/usr/bin/firefox'
 function! s:OpenLinkUnderCursor()
-	let curr_line = getline('.')
-	let link = matchstr(curr_line, '\(http\|https\|ftp\|file\)://[^ )"]*')
-	if link != ''
-		execute ':silent !' . s:web_browser_path . ' ' . '"' . link . '"'
-	endif
+    let curr_line = getline('.')
+    let link = matchstr(curr_line, '\(http\|https\|ftp\|file\)://[^ )"]*')
+    if link != ''
+        execute ':silent !' . s:web_browser_path . ' ' . '"' . link . '"'
+    endif
 endfunction
 nnoremap <silent> gl :call <SID>OpenLinkUnderCursor()<CR>
 
@@ -383,14 +383,14 @@ nnoremap <silent> <F1> :set spell!<CR>:set spell?<CR>
 
 " Shift-F1: Toggle English/Slovak/Czech spell dictionary.
 function! s:ToggleSpelllang()
-	if &spelllang =~ 'en'
-		set spelllang=sk
-	elseif &spelllang =~ 'sk'
-		set spelllang=cs
-	elseif &spelllang =~ 'cs'
-		set spelllang=en
-	endif
-	set spelllang?
+    if &spelllang =~ 'en'
+        set spelllang=sk
+    elseif &spelllang =~ 'sk'
+        set spelllang=cs
+    elseif &spelllang =~ 'cs'
+        set spelllang=en
+    endif
+    set spelllang?
 endfunction
 nnoremap <silent> <S-F1> :call <SID>ToggleSpelllang()<CR>
 
@@ -400,13 +400,13 @@ nnoremap :Q :q
 
 " Shift+F3: Toggle the display of colorcolumn.
 function! s:ToggleColorColumn()
-	if &colorcolumn > 0
-		set colorcolumn=""
-	elseif &textwidth > 0
-		let &colorcolumn = &textwidth
-	else
-		set colorcolumn=80,100
-	endif
+    if &colorcolumn > 0
+        set colorcolumn=""
+    elseif &textwidth > 0
+        let &colorcolumn = &textwidth
+    else
+        set colorcolumn=80,100
+    endif
 endfunction
 nnoremap <silent> <S-F3> :call <SID>ToggleColorColumn()<CR>
 
@@ -468,12 +468,12 @@ au FileType python let b:argwrap_tail_comma = 1
 let g:sort_motion = '_gs'
 
 function! s:SortImportsCaseInsensitively()
-	if getline('.') =~ '^import\|^from.*import'
-		let g:sort_motion_flags = 'ui'
-	else
-		let g:sort_motion_flags = ''
-	endif
-	normal _gs
+    if getline('.') =~ '^import\|^from.*import'
+        let g:sort_motion_flags = 'ui'
+    else
+        let g:sort_motion_flags = ''
+    endif
+    normal _gs
 endfunction
 nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 
