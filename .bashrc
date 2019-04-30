@@ -187,7 +187,6 @@ alias getclip='xclip -selection clipboard -o'
 alias oddlines='sed "n; d"'
 alias evenlines='sed "1d; n; d"'
 
-alias m='make'
 # -s = dependencies, -r remove build time deps,
 # -c clean tmp build files, -i install
 alias mpkg='makepkg -srci'
