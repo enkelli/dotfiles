@@ -129,6 +129,10 @@ set whichwrap+=<,>,[,]
 " These files are less likely to be edited.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
+" Disable beeping and flashing.
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 " Colors.
 color elflord
 syntax on
