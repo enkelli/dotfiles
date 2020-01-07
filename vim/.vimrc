@@ -412,7 +412,9 @@ function! s:ToggleColorColumn()
         set colorcolumn=80,100
     endif
 endfunction
+
 nnoremap <silent> <S-F3> :call <SID>ToggleColorColumn()<CR>
+hi ColorColumn ctermbg=233
 
 " F4: Toggle line wrapping.
 nnoremap <silent> <F4> :set nowrap!<CR>:set nowrap?<CR>
