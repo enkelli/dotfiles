@@ -409,7 +409,7 @@ function! s:ToggleColorColumn()
     elseif &textwidth > 0
         let &colorcolumn = &textwidth
     else
-        set colorcolumn=80,100
+        set colorcolumn=80,100,110
     endif
 endfunction
 
