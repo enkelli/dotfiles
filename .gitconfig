@@ -62,7 +62,6 @@
 	pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
 	pl = pull
 	plpr = pull --prune
-	plrb = pull --rebase
 	pushforce = push --force-with-lease
 	pforce = push --force-with-lease
 	rb = rebase
@@ -113,3 +112,6 @@
 [include]
 	; Include a local config when it exists.
 	path = .gitconfig.local
+
+[pull]
+	rebase = true
