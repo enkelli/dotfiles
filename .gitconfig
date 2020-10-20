@@ -83,6 +83,7 @@
 	; https://github.com/aanand/git-up
 	u = up
 	undo = reset --soft HEAD^
+	w = grep -w
 
 [core]
 	; Whitespace problems that git should recognize.
