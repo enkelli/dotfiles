@@ -485,6 +485,15 @@ nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 
 augroup end
 
+" Kotlin
+augroup python
+au!
+au FileType kotlin setl expandtab     " Use spaces instead of tabs.
+au FileType kotlin setl tabstop=4     " A tab counts for 4 spaces.
+au FileType kotlin setl softtabstop=4 " Causes backspace to delete 4 spaces.
+au FileType kotlin setl shiftwidth=4  " Shift by 4 spaces.
+augroup end
+
 " Git commits.
 augroup gitcommit
 au!
