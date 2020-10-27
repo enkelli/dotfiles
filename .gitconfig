@@ -92,6 +92,7 @@
 	pager = less -iFRXS -x4
 	; Used editor.
 	editor = vim
+	excludesfile = ~/.gitignore_global
 
 [diff]
 	; Allow `git diff` to do basic rename and copy detection.
