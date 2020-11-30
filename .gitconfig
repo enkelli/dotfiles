@@ -80,8 +80,7 @@
 	shu = stash --include-untracked
 	sw = show --format=fuller
 	tags = tag --list -n1
-	; https://github.com/aanand/git-up
-	u = up
+	u = plpr
 	undo = reset --soft HEAD^
 	w = grep -w
 
