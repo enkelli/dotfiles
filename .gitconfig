@@ -63,7 +63,7 @@
 	pforce = push --force-with-lease
 	pl = pull
 	plpr = pull --prune
-	pn = push -u origin
+	pn = push -u
 	pt = push --tags
 	pushforce = push --force-with-lease
 	rb = rebase
