@@ -486,7 +486,7 @@ nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 augroup end
 
 " Kotlin
-augroup python
+augroup kotlin
 au!
 au FileType kotlin setl expandtab     " Use spaces instead of tabs.
 au FileType kotlin setl tabstop=4     " A tab counts for 4 spaces.
