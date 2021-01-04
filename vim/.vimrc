@@ -485,6 +485,15 @@ nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 
 augroup end
 
+" JavaScript
+augroup javascript
+au!
+au FileType javascript setl expandtab
+au FileType javascript setl tabstop=4
+au FileType javascript setl softtabstop=4
+au FileType javascript setl shiftwidth=4
+augroup end
+
 " Kotlin
 augroup kotlin
 au!
@@ -536,6 +545,25 @@ augroup end
 "------------------------------------------------------------------------------
 " Plugins.
 "------------------------------------------------------------------------------
+
+"------------------------------------
+" vim-grepper: Helps you win at grep.
+"------------------------------------
+let g:grepper={}
+" Use the quickfix window.
+let g:grepper.quickfix=1
+" Open the quickfix window after the search finishes.
+let g:grepper.open=1
+" Switch to the quickfix window after the search finishes.
+let g:grepper.switch=1
+" Show the prompt by default.
+let g:grepper.prompt=1
+" Supported tools (use 'git' before 'ag').
+let g:grepper.tools=['git', 'ag', 'ack', 'grep', 'findstr', 'sift', 'pt']
+" Works like /, but uses vim-grepper to do the searching.
+nnoremap <Leader>/ :Grepper<CR>
+" Works like *, but uses vim-grepper to do the searching.
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
 "-----------------------------------------
 " Command-T: Fast file navigation for VIM.

@@ -15,6 +15,7 @@ I install the following plugins using [pathogen](https://github.com/tpope/vim-pa
 * [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
 * [vim-argwrap](https://github.com/FooSoft/vim-argwrap) - Wrap and unwrap function arguments, lists, collections, etc.
 * [vim-bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste) - Transparent pasting into vim.
+* [vim-grepper](https://github.com/mhinz/vim-grepper) - Helps you win at grep.
 * [vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus) - Look up words in an online thesaurus.
 * [vim-repeat](https://github.com/tpope/vim-repeat) - Enables repeating plugin maps with `"."`.
 * [vim-sort-motion](https://github.com/christoomey/vim-sort-motion) - Sort using text objects and motions.
