@@ -8,6 +8,7 @@ I install the following plugins using [pathogen](https://github.com/tpope/vim-pa
 
 * [ALE](https://github.com/w0rp/ale) - Asynchronous lint engine.
 * [Command-T](https://github.com/wincent/command-t) - Fast "fuzzy" mechanism for opening files and more.
+* [jedi-vim](https://github.com/davidhalter/jedi-vim) - awesome Python autocompletion with VIM.
 * [matchit](https://www.vim.org/scripts/script.php?script_id=39) - Extends `"%"` for other languages.
 * [NERDTree](https://github.com/scrooloose/nerdtree) - File system explorer.
 * [targets.vim](https://github.com/wellle/targets.vim) - Additional text objects and seeking.

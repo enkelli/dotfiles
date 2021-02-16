@@ -483,6 +483,11 @@ function! s:SortImportsCaseInsensitively()
 endfunction
 nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 
+" Jedi
+let g:jedi#completions_command = "<C-N>"
+" Show definitions in new tabs
+let g:jedi#use_tabs_not_buffers = 1
+
 augroup end
 
 " JavaScript
