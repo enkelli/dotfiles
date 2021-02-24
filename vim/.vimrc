@@ -487,6 +487,8 @@ nnoremap <silent> gs :call <SID>SortImportsCaseInsensitively()<CR>g@
 let g:jedi#completions_command = "<C-N>"
 " Show definitions in new tabs
 let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#goto_command = "<leader>f"
+let g:jedi#documentation_command = "<leader>d"
 
 augroup end
 
