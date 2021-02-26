@@ -11,6 +11,7 @@ I install the following plugins using [pathogen](https://github.com/tpope/vim-pa
 * [jedi-vim](https://github.com/davidhalter/jedi-vim) - awesome Python autocompletion with VIM.
 * [matchit](https://www.vim.org/scripts/script.php?script_id=39) - Extends `"%"` for other languages.
 * [NERDTree](https://github.com/scrooloose/nerdtree) - File system explorer.
+* [supertab](https://github.com/ervandew/supertab) - Use `<Tab>` for all your insert completion needs.
 * [targets.vim](https://github.com/wellle/targets.vim) - Additional text objects and seeking.
 * [tcomment_vim](https://github.com/tomtom/tcomment_vim) - Add/remove comments with motion.
 * [utilsnips](https://github.com/SirVer/ultisnips) - Snippets in Vim.
