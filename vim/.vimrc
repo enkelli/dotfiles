@@ -549,6 +549,18 @@ au FileType markdown setl softtabstop=4 " Causes backspace to delete 4 spaces.
 au FileType markdown setl shiftwidth=4  " Shift by 4 spaces.
 augroup end
 
+" Conf
+augroup conf
+au!
+" The following settings are based on these guidelines:
+"  - python.org/dev/peps/pep-0008
+au FileType conf setl expandtab     " Use spaces instead of tabs.
+au FileType conf setl tabstop=4     " A tab counts for 4 spaces.
+au FileType conf setl softtabstop=4 " Causes backspace to delete 4 spaces.
+au FileType conf setl shiftwidth=4  " Shift by 4 spaces.
+augroup end
+
+
 "------------------------------------------------------------------------------
 " Plugins.
 "------------------------------------------------------------------------------
